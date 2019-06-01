@@ -12,7 +12,7 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-//app.use(validator());
+app.use(validator());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

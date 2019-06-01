@@ -22,7 +22,8 @@ passport.use('local.signup', new LocalStrategy({
       .isLegth({min: 4}).withMessage('Password must be atleast 4 char long');
   req.checkBody('confirmedPassword', 'Password do not match').equals(req.body.password);
   req.checkBody('name').isAlpha().withMessage('Name field must be only alphabet')
-      .notEmpty().withMessage('Name field is required')
+      .notEmpty()
+      .withMessage('Name field is required')
       .isLength({min: 3}).withMessage('Name field must be atleast 3 char long');
   var errors = req.validationErrors();
   if(errors) {
