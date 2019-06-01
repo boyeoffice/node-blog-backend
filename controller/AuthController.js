@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../model/user');
-const passport = require('passport');
+//const passport = require('passport');
 const mongoose = require('mongoose');
 
 router.post('/register', (req, res, next) => {

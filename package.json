@@ -8,5 +8,18 @@
     "test": "node test.js"
   },
   "author": "Olakunle Boye",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "mongoose": "^5.4.11",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "express-validator": "^5.3.1"
+  }
 }
