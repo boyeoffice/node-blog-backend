@@ -1,0 +1,12 @@
+{
+  "name": "node-blog-backend",
+  "version": "1.0.0",
+  "description": "A node app backend for blogging",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "node test.js"
+  },
+  "author": "Olakunle Boye",
+  "license": "ISC"
+}
