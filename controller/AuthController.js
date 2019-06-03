@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../model/user');
+const jwt = require('jsonwebtoken');
 //const passport = require('passport');
 const mongoose = require('mongoose');
 
@@ -87,10 +88,23 @@ router.post('/login', (req, res, next) => {
           return res.status(401).json({
             message: "Password does not match"
           });
-        }
+        }else{
+          const token = jwt.sign(
+            {
+              email: user.email,
+              userId: user._id
+            },
+            process.env.JWT_KEY,
+            {
+              expiresIn: '1h'
+            }
+          );
+
         return res.status(200).json({
-          message: "User logged in"
+          message: "User logged in",
+          token: token
         });
+        }
       });
 });
 module.exports = router;
